@@ -6,7 +6,10 @@ import io.dropwizard.core.setup.Environment;
 import com.abdulla.customerinsights.api.StatusResource;
 import com.abdulla.customerinsights.api.CustomerResource;
 import com.abdulla.customerinsights.core.CustomerService;
-
+import com.abdulla.customerinsights.api.InteractionResource;
+import com.abdulla.customerinsights.core.InteractionService;
+import com.abdulla.customerinsights.api.AnalyticsResource;
+import com.abdulla.customerinsights.core.AnalyticsService;
 public class CustomerInsightsServiceApplication extends Application<CustomerInsightsServiceConfiguration> {
 
     public static void main(final String[] args) throws Exception {
@@ -33,6 +36,16 @@ public class CustomerInsightsServiceApplication extends Application<CustomerInsi
         // register customer API
         CustomerService customerService = new CustomerService();
         environment.jersey().register(new CustomerResource(customerService));
+
+        InteractionService interactionService = new InteractionService(customerService);
+        environment.jersey().register(new InteractionResource(interactionService));
+
+        AnalyticsService analyticsService = new AnalyticsService(customerService, interactionService);
+        environment.jersey().register(new AnalyticsResource(analyticsService));
+
+        environment.jersey().register(new com.abdulla.customerinsights.api.mappers.ConstraintViolationExceptionMapper());
+        environment.jersey().register(new com.abdulla.customerinsights.api.mappers.WebApplicationExceptionMapper());
+
     }
 
 }

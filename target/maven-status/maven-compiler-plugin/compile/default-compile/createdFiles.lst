@@ -1,6 +1,13 @@
+com/abdulla/customerinsights/api/dto/AnalyticsSummary.class
 com/abdulla/customerinsights/api/StatusResource.class
 com/abdulla/customerinsights/CustomerInsightsServiceConfiguration.class
+com/abdulla/customerinsights/api/dto/AnalyticsSummary$CustomerActivity.class
+com/abdulla/customerinsights/api/AnalyticsResource.class
 com/abdulla/customerinsights/api/CustomerResource.class
+com/abdulla/customerinsights/core/Interaction.class
+com/abdulla/customerinsights/core/InteractionService.class
+com/abdulla/customerinsights/core/CustomerService.class
+com/abdulla/customerinsights/core/AnalyticsService.class
+com/abdulla/customerinsights/api/InteractionResource.class
 com/abdulla/customerinsights/CustomerInsightsServiceApplication.class
 com/abdulla/customerinsights/core/Customer.class
-com/abdulla/customerinsights/core/CustomerService.class
