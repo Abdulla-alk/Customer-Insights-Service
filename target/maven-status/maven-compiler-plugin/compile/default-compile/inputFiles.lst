@@ -1,2 +1,6 @@
 /Users/abdulla/Desktop/customer-insights-service/src/main/java/com/abdulla/customerinsights/CustomerInsightsServiceApplication.java
+/Users/abdulla/Desktop/customer-insights-service/src/main/java/com/abdulla/customerinsights/api/StatusResource.java
+/Users/abdulla/Desktop/customer-insights-service/src/main/java/com/abdulla/customerinsights/api/CustomerResource.java
 /Users/abdulla/Desktop/customer-insights-service/src/main/java/com/abdulla/customerinsights/CustomerInsightsServiceConfiguration.java
+/Users/abdulla/Desktop/customer-insights-service/src/main/java/com/abdulla/customerinsights/core/Customer.java
+/Users/abdulla/Desktop/customer-insights-service/src/main/java/com/abdulla/customerinsights/core/CustomerService.java
